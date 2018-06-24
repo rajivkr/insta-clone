@@ -8,7 +8,9 @@
     "react-scripts": "^1.1.4"
   },
   "dependencies": {
+    "autoprefixer-stylus": "0.14.0",
     "history": "^4.7.2",
+    "raven-js": "^3.26.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
@@ -17,8 +19,7 @@
     "react-router-redux": "^5.0.0-alpha.9",
     "react-transition-group": "^1.2.1",
     "redux": "^3.7.2",
-    "stylus": "0.54.5",
-    "autoprefixer-stylus": "0.14.0"
+    "stylus": "0.54.5"
   },
   "scripts": {
     "dev": "react-scripts start",
