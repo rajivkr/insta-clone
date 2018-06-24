@@ -2,6 +2,11 @@
   "name": "insta-clone",
   "version": "0.1.0",
   "private": true,
+  "devDependencies": {
+    "concurrently": "3.5.1",
+    "eslint-plugin-react": "^7.9.1",
+    "react-scripts": "^1.1.4"
+  },
   "dependencies": {
     "history": "^4.7.2",
     "react": "^16.2.0",
@@ -10,14 +15,18 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.9",
-    "react-scripts": "1.0.17",
     "react-transition-group": "^1.2.1",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "stylus": "0.54.5",
+    "autoprefixer-stylus": "0.14.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "start": "serve --single ./build",
+    "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run dev\" \"npm run styles:watch\"",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "styles": "stylus -u autoprefixer-stylus ./src/css/style.styl -o ./src/css/style.css",
+    "styles:watch": "stylus -u autoprefixer-stylus -w ./src/css/style.styl -o ./src/css/style.css"
   }
 }

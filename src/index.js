@@ -1,8 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
 // css
-import './styles/style.css'
-
+import './css/style.css'
 import App from './components/App'
 import { Route } from 'react-router-dom'
 
