@@ -1,4 +1,4 @@
-import { routerReducer } from 'react-router-redux';
+import { routerReducer } from 'connected-react-router';
 import { combineReducers } from 'redux';
 import comments from './comments';
 import posts from './posts';

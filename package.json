@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "autoprefixer-stylus": "0.14.0",
+    "connected-react-router": "^4.3.0",
     "history": "^4.7.2",
     "raven-js": "^3.26.3",
     "react": "^16.2.0",
@@ -16,7 +17,6 @@
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-router-redux": "^5.0.0-alpha.9",
     "react-transition-group": "^1.2.1",
     "redux": "^3.7.2",
     "stylus": "0.54.5"

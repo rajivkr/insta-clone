@@ -1,5 +1,5 @@
-import createHistory from 'history/createBrowserHistory';
-import { routerMiddleware } from 'react-router-redux';
+import { connectRouter, routerMiddleware } from 'connected-react-router';
+import { createBrowserHistory } from 'history';
 import { applyMiddleware, compose, createStore } from 'redux';
 import comments from './data/comments';
 import posts from './data/posts';
@@ -11,13 +11,13 @@ const defaultState = {
 };
 
 // Create a history of your choosing (we're using a browser history in this case)
-const history = createHistory();
+const history = createBrowserHistory();
 
 // Build the middleware for intercepting and dispatching navigation actions
 const middleware = routerMiddleware(history);
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
-  rootReducer,
+  connectRouter(history)(rootReducer),
   defaultState,
   composeEnhancers(applyMiddleware(middleware))
 );
