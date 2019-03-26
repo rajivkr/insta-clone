@@ -7,7 +7,7 @@ const Main = props => {
   return (
     <div>
       <h1>
-        <Link to="/">Reduxstagram</Link>
+        <Link to="/">instagram</Link>
       </h1>
       <Route exact path="/" render={() => <PhotoGrid {...props} />} />
       <Route
